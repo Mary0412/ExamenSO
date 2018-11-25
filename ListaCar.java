@@ -26,15 +26,15 @@ protected Auto inicio,fin;
     
     }
         
-         public void agregarFinal(int id,int tiempo,int tamano,int tiempo_ejecucion){
+         public void agregarFinal(String modelo, int numero,String color){
 		if(!estaVacia()){
                 
          
-                    fin.siguiente=new Nodo(id,tiempo,tamano,inicio,tiempo_ejecucion);
+                    fin.siguiente=new Auto(modelo,numero,color);
                     fin=fin.siguiente;
                 
                 }else{
-                            inicio=fin=new Nodo(id,tiempo,tamano,inicio,tiempo_ejecucion);
+                            inicio=fin=new Nodo(modelo,numero,color);
                 
                 
                 }
