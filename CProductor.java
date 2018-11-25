@@ -1,11 +1,11 @@
 class CProductor extends Thread {
 		
-		public CProductor (CMensaje c) {
-		Auto car=new Auto();
+		private Auto []entradauto //último mensaje producido
+		public CProductor (Auto c) {
+		entradauto=c;
 		}
 		public void run() {
-		int nMsj;
-//numero de mensaje
+
 		while (true) {
 			nMsj = (int)(Math.random()*100); //genera num. de msj
 		mensaje.Almacenar(nMsj); //almaena el mensaje
