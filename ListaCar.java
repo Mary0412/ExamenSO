@@ -1,12 +1,15 @@
-public class ListaCar{
-rotected Nodo inicio,fin;
 
-	public ListaCar(){
-		inicio=null;
-		fin=null;
-                
-	}
-   
+
+package examen_sistemas_operativos;
+
+public class Lista {
+    public Nodo inicio,fin;
+    
+    public Lista(){
+    inicio=null;
+    fin=null;
+    }
+ 
     public boolean estaVacia(){
     
     	if(inicio==null){
@@ -16,16 +19,16 @@ rotected Nodo inicio,fin;
     
     }
         
-    public void agregarFinal(Auto car){
+    public void agregarFinal(String color,String marca,String placa){
 		if(!estaVacia()){
                 
          
-                fin.siguiente=new Nodo(car);
+                fin.siguiente=new Nodo(color,marca,placa);
                 fin=fin.siguiente;
                 
             }else{
                   
-                  inicio=fin=new Nodo(car);
+                  inicio=fin=new Nodo(color,marca,placa);
                    
              }
                                           
@@ -34,7 +37,7 @@ rotected Nodo inicio,fin;
 	public void mostrarFila(){
 	Nodo recorrer=inicio;
 	while(recorrer!=null){
-		System.out.println("Auto");
+		System.out.println("color:"+recorrer.color+"\tmarca:"+recorrer.marca+"\tplaca:"+recorrer.placa);
 		
                 recorrer=recorrer.siguiente;
 	}
@@ -42,26 +45,6 @@ rotected Nodo inicio,fin;
         
 	}
 
-        
-    public boolean iterar(){
-		if(inicio==fin && fin==null){
-		return true;
-	}else{return false;}}
-
-	public void borrarAuto(){
-	//int tem=fin.tamaño;
-	if(inicio==fin){
-		inicio=null;
-		fin=null;
-	}else{
-		inicio=inicio.siguiente;
-		/*Nodo auxiliar=inicio;
-		while(auxiliar.siguiente!=fin){
-			auxiliar=auxiliar.siguiente;
-		}fin=auxiliar;
-		fin.siguiente=null;*/
-	}
-      }
-        
+    
+    
 }
-
