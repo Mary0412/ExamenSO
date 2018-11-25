@@ -1,50 +1,38 @@
 public class ListaCar{
-protected Auto inicio,fin;
+rotected Nodo inicio,fin;
 
 	public ListaCar(){
 		inicio=null;
 		fin=null;
                 
 	}
-//
-//	public void agregar(int id,int tiempo,int tamano,int tiempo_ejecucion){
-//		inicio=new Nodo(id,tiempo,tamano,inicio,tiempo_ejecucion);
-//		if(fin==null){
-//			fin=inicio;
-//		}
-//                
-//                
-//	}
-//        
-//      
-         public boolean estaVacia(){
+   
+    public boolean estaVacia(){
     
-    if(inicio==null){
-        return true;
+    	if(inicio==null){
+        	return true;
     
-    }else {return false;}
+    	}else {return false;}
     
     }
         
-         public void agregarFinal(String modelo, int numero,String color){
+    public void agregarFinal(Auto car){
 		if(!estaVacia()){
                 
          
-                    fin.siguiente=new Auto(modelo,numero,color);
-                    fin=fin.siguiente;
+                fin.siguiente=new Nodo(car);
+                fin=fin.siguiente;
                 
-                }else{
-                            inicio=fin=new Nodo(modelo,numero,color);
-                
-                
-                }
-                
-                
-                
+            }else{
+                  
+                  inicio=fin=new Nodo(car);
+                   
+             }
+                                          
 	}
     
 	public void mostrarFila(){
-	Auto recorrer=inicio;
+	Nodo recorrer=inicio;
 	while(recorrer!=null){
 		System.out.println("Auto");
 		
@@ -55,7 +43,7 @@ protected Auto inicio,fin;
 	}
 
         
-        public boolean iterar(){
+    public boolean iterar(){
 		if(inicio==fin && fin==null){
 		return true;
 	}else{return false;}}
