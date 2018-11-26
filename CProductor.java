@@ -14,9 +14,9 @@ class CProductor extends Thread {
 			//synchronized(listacar){
 				
 				Auto car=new Auto();
-       			listacar.agregarFinal(car.color_auto,car.marca_auto,car.placa);
+       			listacar.agregarFinal(car);
 				
-				System.out.println("Productor "+ getName() + " almacena el carro #" + i+"\ncolor:"+car.color_auto+"\tmarca:"+car.marca_auto+"\tplaca:"+car.placa);
+				System.out.println("\nProductor "+ getName() + " almacena el carro #" + i+"\ncolor:"+car.color_auto+"\tmarca:"+car.marca_auto+"\tplaca:"+car.placa);
 				try {sleep(2);
 			//sleep((int)(Math.random()*100));
 				} catch (InterruptedException e) {}
@@ -24,6 +24,5 @@ class CProductor extends Thread {
 			}
 			/*System.out.println("Entrada 1:");
 			listacar.mostrarFila();*/
-		}	
 	
 }
