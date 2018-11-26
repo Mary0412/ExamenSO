@@ -3,11 +3,10 @@ package examen_sistemas_operativos;
 import java.util.*;
 
 public class Examen_sistemas_operativos {
-
-    public static void main(String[] args) {
-        
-        int entradas;
+public static void main(String[] args){
+		int entradas;
         int salidas;
+        Auto salida;
        // Scanner num_entradas=new Scanner(System.in);
         //Scanner num_salidas=new Scanner(System.in);
         ListaCar lista_coches=new ListaCar();
@@ -41,7 +40,10 @@ public class Examen_sistemas_operativos {
 		}catch(InterruptedException ex){}
        	System.out.println("\n\nEn la entrada 1: ");
         lista_coches.mostrarFila();
+        salida = lista_coches.borrarAuto();
+          System.out.println("\n\nEn la entrada 1: ");
+        lista_coches.mostrarFila();
 
-    }
+	}
     
 }
