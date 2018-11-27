@@ -1,11 +1,9 @@
 
-
 package examen_sistemas_operativos;
 
 public class Nodo {
-    
+    Auto carro;
     String color,marca,placa;
-    Auto coche;
     Nodo nodo;
     Nodo anterior;
     Nodo siguiente; //enlaza los nodos (simplemente enlazados)
@@ -13,12 +11,9 @@ public class Nodo {
     
     
    public Nodo(Auto c){
-        /*this.color=color;
-                this.marca=marca;
-                this.placa=placa;*/
-                coche=c;
+		   carro=c;
         this.siguiente=null;
                 
-}
+		}
 
 }
