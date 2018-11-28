@@ -1,11 +1,11 @@
 
-package examen_sistemas_operativos;
+
 
 import java.util.*;
 
 public class Auto {
     
-        int numero;//para saber que numeo de auto creado es si el 1 o 20 o el 50
+        int numero;
         String marca_auto,color_auto,placa;
         String placas_letras;
         int placas_num1;
